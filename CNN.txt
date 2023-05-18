@@ -8,27 +8,6 @@ ip nat inside source static 192.168.1.10 100.100.100.10
 exit
 
 enable
-configure terminal
-vlan 10
-name Computer1_VLAN
-exit
-
-vlan 20
-name Computer2_VLAN
-exit
-
-interface FastEthernet 0/1
-switchport mode access
-switchport access vlan 10
-exit
-
-interface FastEthernet 0/1
-switchport mode access
-switchport access vlan 10
-exit
-exit
-
-enable
 config t
 access-list 1 deny 192.168.2.2 0.0.0.0
 access-list 1 permit any
